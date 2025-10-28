@@ -41,7 +41,7 @@ class HomeViewModel(
         }
     }
 
-    private val attestationRepository = AttestationRepository(KeyStoreKeyType.ECDSA)
+    private val attestationRepository = AttestationRepository()
     private val attestationData = MutableLiveData<Resource<BaseData>>()
 
     var secretMode = sp.getBoolean("secret_mode", true)
